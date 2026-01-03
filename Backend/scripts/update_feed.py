@@ -34,6 +34,14 @@ def download_subtitles(video_id):
 
     print(f"Downloading subtitles for {video_id}...")
     
+    # Check for cookies in environment variable
+    cookies_content = os.environ.get("YOUTUBE_COOKIES")
+    cookie_file = "cookies.txt"
+    if cookies_content:
+        # Create a temporary cookies file
+        with open(cookie_file, "w") as f:
+            f.write(cookies_content)
+    
     ydl_opts = {
         'skip_download': True,
         'writesubtitles': True,
@@ -45,11 +53,21 @@ def download_subtitles(video_id):
         'outtmpl': os.path.join(SUBTITLES_DIR, '%(id)s'),
         'quiet': True,
         'no_warnings': True,
+        'http_headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        }
     }
+    
+    if cookies_content:
+        ydl_opts['cookiefile'] = cookie_file
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([f"https://www.youtube.com/watch?v={video_id}"])
+            
+        # Clean up cookie file
+        if cookies_content and os.path.exists(cookie_file):
+            os.remove(cookie_file)
             
         # Check if the file exists now
         if os.path.exists(full_path):

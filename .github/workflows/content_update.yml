@@ -20,16 +20,18 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.10'
         
     - name: Install dependencies
       run: |
         sudo apt-get update && sudo apt-get install -y ffmpeg
+        pip install -U yt-dlp
         pip install -r Backend/requirements.txt
         
     - name: Run Update Script
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
       run: |
         python Backend/scripts/update_feed.py
         
