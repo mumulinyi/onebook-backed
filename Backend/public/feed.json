@@ -295,7 +295,8 @@
     "thumbnail": "https://i.ytimg.com/vi/9dMS3OUFYqI/hqdefault.jpg",
     "description": "We went straight to the source at KubeCon to get pro tips for developers using NVIDIA GPUs on Google Cloud.\n\nHear from three NVIDIA experts as they solve common challenges:\n\nSanjay Chatterjee on simplifying complex, multi-node AI inference with the Grove API.\nMichael Hallock on finding system-level bottlenecks with Nsight Cloud for performance profiling.\nEkin Karabulut on solving \"\"cold starts\"\" and latency during auto-scaling with Run:ai Model Streamer.\n\nLearn more and connect with experts by joining the Google Cloud and NVIDIA community!\n\nSubscribe to Google for Developers → https://goo.gle/developers \n\n#KubeCon #NVIDIA #GoogleCloud #GPU #AI #mlops \n\nSpeaker: Stephanie Wong \nProducts Mentioned: Cloud",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/9dMS3OUFYqI.en.vtt"
   },
   {
     "id": "LRYENUr03Nk",
@@ -313,7 +314,8 @@
     "thumbnail": "https://i.ytimg.com/vi/qR9Da0cWhQg/hqdefault.jpg",
     "description": "The way developers request resources like GPUs in Kubernetes is fundamentally changing. We grabbed Mofi Rahman from Google Cloud and Kevin Klues from NVIDIA at KubeCon to explain the paradigm shift called Dynamic Resource Allocation (DRA).\n\nLearn why the old model of requesting specific 'nodes' was inefficient and how the new model of requesting a 'capability' simplifies workflows, makes hardware management more efficient, and future-proofs Kubernetes for the next generation of technology.\n\nThis is a must-watch for any developer or platform admin working with specialized hardware in Kubernetes.\n\nSubscribe to Google for Developers → https://goo.gle/developers \n\n#KubeCon #Kubernetes #NVIDIA\n\nSpeaker: Stephanie Wong \nProducts Mentioned: Cloud",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/qR9Da0cWhQg.en.vtt"
   },
   {
     "id": "9IOLsuerMaU",
@@ -700,7 +702,8 @@
     "thumbnail": "https://i.ytimg.com/vi/zmtrkVTOGtE/hqdefault.jpg",
     "description": "Logan Kilpatrick and Kat Kampf showcase how Gemini 3 can create rich interactive visualizations. Logan demonstrates an animated, interactive version of the Gemini 3 logo created from a simple image prompt, while Kat shows how she used the model to turn a dense 20-page quantum research paper into an accessible, interactive visual explorer.\n\nVibe coding in AI Studio: Bring anything to life with Gemini 3 at ai.studio/build\n\nWatch the full live stream here: https://www.youtube.com/live/YfFkPAso4kE",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/zmtrkVTOGtE.en.vtt"
   },
   {
     "id": "te5gShC_Yt4",
@@ -781,7 +784,8 @@
     "thumbnail": "https://i.ytimg.com/vi/nHXLwQc8Xlw/hqdefault.jpg",
     "description": "Kat Kampf asks the model to generate a pixel art timeline of Logan Kilpatrick's career. She highlights the model's \"thinking process\" feature, showing the team how Gemini 3 Pro plans visual elements and references sources before generating the final image.\n\nVibe coding in AI Studio: Bring anything to life with Gemini 3 and Nano Banana Pro at ai.studio/build\n\nWatch the full live stream here: https://www.youtube.com/watch?v=y-RQ48sfPgM",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/nHXLwQc8Xlw.en.vtt"
   },
   {
     "id": "ZQlz5OGoyZ4",
@@ -826,7 +830,8 @@
     "thumbnail": "https://i.ytimg.com/vi/NjiF9eCQ4mU/hqdefault.jpg",
     "description": "Kat Kampf demonstrates how to build a custom running app using Google Maps Grounding in AI Studio. She shows Logan Kilpatrick and Ammaar Reshi how the model uses real-world location data to generate specific running routes in Brooklyn based on user input.\n\nVibe coding in AI Studio: Bring anything to life with Gemini 3 at ai.studio/build\n\nWatch the full live stream here: https://www.youtube.com/live/YfFkPAso4kE",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/NjiF9eCQ4mU.en.vtt"
   },
   {
     "id": "PTRTIaoKh7I",
@@ -871,7 +876,8 @@
     "thumbnail": "https://i.ytimg.com/vi/E9Y1gCwuN5o/hqdefault.jpg",
     "description": "Ammaar Reshi demonstrates the \"Daily Gemini,\" an app that combines Google Search with image generation to create illustrated newspapers based on real-time news. He shows Logan Kilpatrick how the app dynamically updates the illustrations when the prompt is changed to cover the Google office in bananas.\n\nVibe coding in AI Studio: Bring anything to life with Gemini 3 and Nano Banana Pro at ai.studio/build\n\nWatch the full live stream here: https://www.youtube.com/watch?v=y-RQ48sfPgM",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/E9Y1gCwuN5o.en.vtt"
   },
   {
     "id": "Cgutj_h7FOg",
@@ -925,7 +931,8 @@
     "thumbnail": "https://i.ytimg.com/vi/9n_W1JoAdTA/hqdefault.jpg",
     "description": "Kat Kampf showcases the model's stylistic versatility by generating a custom airline safety card cartoon about office life. She also demonstrates a photography analysis tool that critiques her photos and generates improved versions based on composition rules like the Rule of Thirds.\n\nVibe coding in AI Studio: Bring anything to life with Gemini 3 and Nano Banana Pro at ai.studio/build\n\nWatch the full live stream here: https://www.youtube.com/watch?v=y-RQ48sfPgM",
     "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-    "channelTitle": "Google for Developers"
+    "channelTitle": "Google for Developers",
+    "subtitleUrl": "subtitles/9n_W1JoAdTA.en.vtt"
   },
   {
     "id": "S6wc6yvoZLY",
@@ -1151,7 +1158,8 @@
     "thumbnail": "https://i.ytimg.com/vi/ly6YKz9UfQ4/hqdefault.jpg",
     "description": "Get the best pair programming app for remote teams - https://tuple.app/fireship - Use code FIRESHIP for a discount\n\nA new MIT study says that 95% of corporate GenAI projects have failed, Meta is pulling back on its AI spend, and tech markets are getting nervous. Is the AI bubble starting to pop? \n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔗 Resources\n\nhttps://www.axios.com/2025/08/21/ai-wall-street-big-tech\n\n📚 Chapters\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font",
     "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "channelTitle": "Fireship"
+    "channelTitle": "Fireship",
+    "subtitleUrl": "subtitles/ly6YKz9UfQ4.en.vtt"
   },
   {
     "id": "uHm6FEb2Re4",
@@ -1187,7 +1195,8 @@
     "thumbnail": "https://i.ytimg.com/vi/miTpJmMt7uo/hqdefault.jpg",
     "description": "Get up to 67% off VPS at Hostinger. Use code FIRESHIP for an extra discount at https://hostinger.com/fireship\n\nIn today's video, we'll find out how the tea app was compromised and look at all the hilarious stuff developers have been building with the hacked data.\n\n#teaapp #tech #coding #programming \n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔗 Resources\nhttps://techcrunch.com/2025/07/26/dating-safety-app-tea-breached-exposing-72000-user-images/\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n- How the Tea app got hacked\n- Who is Sean Cook?\n- How to not set up Firebase\n- Online Safety Act\n- Did vibe coding cause the Tea app hack?",
     "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "channelTitle": "Fireship"
+    "channelTitle": "Fireship",
+    "subtitleUrl": "subtitles/miTpJmMt7uo.en.vtt"
   },
   {
     "id": "-w53i6Ae-YM",
@@ -1304,7 +1313,8 @@
     "thumbnail": "https://i.ytimg.com/vi/NIgrGqmoeHs/hqdefault.jpg",
     "description": "Get the free 80,000 hours career guide https://80000hours.org/fireship\n\nMicrosoft just made GitHub Copilot free and open source software under the MIT License. As of today, you can fork it, modify it and even build your own billion dollar competitor without going to prison.\n\n#ai #coding #microsoft \n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔗 Resources\nMIT License: https://opensource.org/license/MIT\nGitHub Copilot: https://github.com/features/copilot\nWSL: https://learn.microsoft.com/en-us/windows/wsl/about\n\n📚 Chapters\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n- How Microsoft open sourced GitHub Copilot\n- Windows Subsystem for Linux (WSL)",
     "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "channelTitle": "Fireship"
+    "channelTitle": "Fireship",
+    "subtitleUrl": "subtitles/NIgrGqmoeHs.en.vtt"
   },
   {
     "id": "jCTvblRXnzg",
@@ -1349,7 +1359,8 @@
     "thumbnail": "https://i.ytimg.com/vi/5aN4Xg0VvCs/hqdefault.jpg",
     "description": "Sign up for CodeRabbit using code FIRESHIP to get get 1-month free https://coderabbit.ai/fireship\n\nRedditors are being manipulated by AI-powered bots in the r/changemyview subreddit, as revealed by controversial research at the University of Zurich. Using AI bots in the name of science is one thing, but what happens when bad actors get their hands on these highly charismatic LLMs?\n\n#ai #coding #reddit \n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🔗 Resources\nhttps://www.youtube.com/watch?v=Tw18-4U7mts\n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n- How AI chatbots manipulated Reddit users\n- Prompt injection\n- Vishing\n- Fine-Tuned Infiltration",
     "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "channelTitle": "Fireship"
+    "channelTitle": "Fireship",
+    "subtitleUrl": "subtitles/5aN4Xg0VvCs.en.vtt"
   },
   {
     "id": "niWpfRyvs2U",
@@ -1593,7 +1604,8 @@
     "thumbnail": "https://i.ytimg.com/vi/gi-wuoIDdjw/hqdefault.jpg",
     "description": "Ross Ulbricht received a presidential pardon for his crimes related to the Silk Road. Let's take a look at the tech stack behind the Silk Road website, which included LAMP stack, PHP, Linux, Tor, and Cryptocurrency. \n\n#tech #webdev #thecodereport \n\n💬 Chat with Me on Discord\n\nhttps://discord.gg/fireship\n\n🔗 Resources\n\nTech Bros who went to jail https://youtu.be/CWeSzhJpJ9U\nTailsOS in 100 Seconds https://youtu.be/mVKAyw0xqxw\n\n📚 Chapters\n\n🔥 Get More Content - Upgrade to PRO\n\nUpgrade at https://fireship.io/pro\nUse code YT25 for 25% off PRO access \n\n🎨 My Editor Settings\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font\n\n🔖 Topics Covered\n\n- Why was Ross Ulbricht pardoned? \n- What was the Silk Road website?\n- Tor explained \n- Technology used for anonymous browsing\n- How does the dark web work?",
     "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "channelTitle": "Fireship"
+    "channelTitle": "Fireship",
+    "subtitleUrl": "subtitles/gi-wuoIDdjw.en.vtt"
   },
   {
     "id": "-2k1rcRzsLA",
