@@ -6,8 +6,8 @@ import time
 import yt_dlp
 
 # Configuration
-DATA_DIR = "data"
-OUTPUT_DIR = "public"
+DATA_DIR = "Backend/data"
+OUTPUT_DIR = "Backend/public"
 SUBTITLES_DIR = os.path.join(OUTPUT_DIR, "subtitles")
 CHANNELS_FILE = os.path.join(DATA_DIR, "channels.json")
 FEED_FILE = os.path.join(OUTPUT_DIR, "feed.json")
