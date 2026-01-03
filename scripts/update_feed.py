@@ -3,15 +3,69 @@ import os
 import requests
 from datetime import datetime
 import time
+import yt_dlp
 
 # Configuration
-DATA_DIR = "Backend/data"
-OUTPUT_DIR = "Backend/public"
+DATA_DIR = "data"
+OUTPUT_DIR = "public"
+SUBTITLES_DIR = os.path.join(OUTPUT_DIR, "subtitles")
 CHANNELS_FILE = os.path.join(DATA_DIR, "channels.json")
 FEED_FILE = os.path.join(OUTPUT_DIR, "feed.json")
 
 # Ensure directories exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(SUBTITLES_DIR, exist_ok=True)
+
+def download_subtitles(video_id):
+    """
+    Downloads subtitles for a video using yt-dlp.
+    Returns the relative path to the subtitle file if successful, else None.
+    """
+    # Expected file path (yt-dlp names it [id].en.vtt by default when requesting 'en')
+    # Note: yt-dlp might use 'en-orig' or other variants depending on availability,
+    # but forcing 'vtt' and specific naming template helps.
+    
+    # We'll check for the file first to avoid re-downloading
+    expected_filename = f"{video_id}.en.vtt"
+    full_path = os.path.join(SUBTITLES_DIR, expected_filename)
+    
+    if os.path.exists(full_path):
+        return f"subtitles/{expected_filename}"
+
+    print(f"Downloading subtitles for {video_id}...")
+    
+    ydl_opts = {
+        'skip_download': True,
+        'writesubtitles': True,
+        'writeautomaticsub': True,
+        'subtitleslangs': ['en'],
+        'subtitlesformat': 'vtt',
+        # Force filename to be just the ID (yt-dlp will append .en.vtt)
+        'outtmpl': os.path.join(SUBTITLES_DIR, '%(id)s'),
+        'quiet': True,
+        'no_warnings': True,
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([f"https://www.youtube.com/watch?v={video_id}"])
+            
+        # Check if the file exists now
+        if os.path.exists(full_path):
+            print(f"Subtitle downloaded: {expected_filename}")
+            return f"subtitles/{expected_filename}"
+        else:
+            # Sometimes it might be just .vtt if no language code is appended (rare with explicit lang)
+            # or it might have downloaded a different language code if 'en' wasn't exact match?
+            # Let's simple-check directory for any file starting with video_id
+            for f in os.listdir(SUBTITLES_DIR):
+                if f.startswith(video_id) and f.endswith(".vtt"):
+                    return f"subtitles/{f}"
+                    
+    except Exception as e:
+        print(f"Failed to download subtitles for {video_id}: {e}")
+    
+    return None
 
 def load_channels():
     if not os.path.exists(CHANNELS_FILE):
@@ -76,6 +130,12 @@ def fetch_videos_from_playlist(playlist_id, api_key, max_results=50):
                     "channelId": snippet.get('channelId'),
                     "channelTitle": snippet.get('channelTitle')
                 }
+                
+                # Fetch subtitles (added)
+                subtitle_path = download_subtitles(video["id"])
+                if subtitle_path:
+                    video["subtitleUrl"] = subtitle_path
+                
                 videos.append(video)
             
             total_fetched += len(items)
