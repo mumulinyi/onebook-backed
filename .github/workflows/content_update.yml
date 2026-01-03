@@ -1,0 +1,40 @@
+name: Content Update
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Every hour
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        sudo apt-get update && sudo apt-get install -y ffmpeg
+        pip install -r Backend/requirements.txt
+        
+    - name: Run Update Script
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      run: |
+        python Backend/scripts/update_feed.py
+        
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add Backend/public/feed.json
+        git add Backend/public/subtitles/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update content feed and subtitles [skip ci]" && git push)
