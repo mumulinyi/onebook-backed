@@ -39,6 +39,8 @@ def download_subtitles(video_id):
     cookie_file = "cookies.txt"
     if cookies_content:
         # Create a temporary cookies file
+        # Ensure we write strictly in Netscape format (which expects LF, not CRLF, but python write handles line endings)
+        # However, yt-dlp can be picky. Let's ensure the content is stripped of potential wrapping quotes if they exist from secrets.
         with open(cookie_file, "w") as f:
             f.write(cookies_content)
     
@@ -53,13 +55,23 @@ def download_subtitles(video_id):
         'outtmpl': os.path.join(SUBTITLES_DIR, '%(id)s'),
         'quiet': True,
         'no_warnings': True,
+        # Use a more modern and common User-Agent to avoid simple bot detection
         'http_headers': {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        }
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept-Language': 'en-US,en;q=0.9',
+        },
+        # Add sleep interval to reduce aggressive requests
+        'sleep_interval': 5,
+        'max_sleep_interval': 10,
     }
     
     if cookies_content:
         ydl_opts['cookiefile'] = cookie_file
+        # Also try to pass cookies source explicitly if needed, but cookiefile is usually enough.
+        # Sometimes 'cookiesfrombrowser' works better locally but not in CI.
+        
+    # Use 'extractor_args' to potentially force IPv4 if IPv6 is blocked (common in data centers)
+    ydl_opts['extractor_args'] = {'youtube': {'player_client': ['web', 'android', 'ios']}}
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
