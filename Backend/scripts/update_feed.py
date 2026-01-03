@@ -61,12 +61,15 @@ def download_subtitles(video_id):
         },
         'sleep_interval': 5,
         'max_sleep_interval': 10,
-        # IMPORTANT: Force using the 'android' client which often bypasses the "Sign in to confirm" web check
-        'extractor_args': {'youtube': {'player_client': ['android', 'ios']}},
+        'cookiesfrombrowser': ('chrome',), 
+        'ignoreerrors': True,
     }
     
     if cookies_content:
         ydl_opts['cookiefile'] = cookie_file
+        # If explicit cookies provided, prioritize them over browser cookies
+        if 'cookiesfrombrowser' in ydl_opts:
+            del ydl_opts['cookiesfrombrowser']
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
