@@ -38,9 +38,10 @@ def download_subtitles(video_id):
         'skip_download': True,
         'writesubtitles': True,
         'writeautomaticsub': True,
-        'subtitleslangs': ['en'],
+        # Change from strict 'en' to regex 'en.*' to match en-US, en-GB, etc.
+        'subtitleslangs': ['en.*'],
         'subtitlesformat': 'vtt',
-        # Force filename to be just the ID (yt-dlp will append .en.vtt)
+        # Force filename to be just the ID (yt-dlp will append .en.vtt or .en-US.vtt)
         'outtmpl': os.path.join(SUBTITLES_DIR, '%(id)s'),
         'quiet': True,
         'no_warnings': True,
